@@ -1,15 +1,17 @@
 require 'pry'
 
 class Artist
+  include Memorable::InstanceMethods
   extend Memorable::ClassMethods
   extend Findable::ClassMethods
+  include Paramable
   attr_accessor :name
   attr_reader :songs
 
   @@artists = []
 
   def initialize
-    @@artists << self
+    super
     @songs = []
   end
 
@@ -17,9 +19,9 @@ class Artist
 #   all.detect{|a| a.name == name}
 # end
 
-def self.all
-   @@artists
- end
+    def self.all
+        @@artists
+    end
 
 #  def self.reset_all
 #   self.all.clear
@@ -38,7 +40,7 @@ def self.all
     songs.each { |song| add_song(song) }
   end
 
-  def to_param
-    name.downcase.gsub(' ', '-')
-  end
+#def to_param
+#   name.downcase.gsub(' ', '-')
+# end
 end
