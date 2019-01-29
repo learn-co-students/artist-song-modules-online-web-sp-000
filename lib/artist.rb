@@ -11,6 +11,8 @@ class Artist
     @songs = []
   end
 
+  extend Memorable
+
   def self.find_by_name(name)
     @@artists.detect{|a| a.name == name}
   end
@@ -18,7 +20,7 @@ class Artist
   def self.all
     @@artists
   end
-
+=begin
   def self.reset_all
     self.all.clear
   end
@@ -26,7 +28,7 @@ class Artist
   def self.count
     self.all.count
   end
-
+=end
   def add_song(song)
     @songs << song
     song.artist = self
