@@ -1,5 +1,7 @@
 require_relative './spec_helper'
 
+
+
 describe Artist do
   before(:each) do
     Artist.reset_all
