@@ -1,0 +1,4 @@
+class Findable 
+  
+  
+end 
