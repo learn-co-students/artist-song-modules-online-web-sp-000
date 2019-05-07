@@ -7,7 +7,6 @@ class Artist
 
   @@artists = []
   extend Memorable
-  #include Memorable
 
   def initialize
     @@artists << self
