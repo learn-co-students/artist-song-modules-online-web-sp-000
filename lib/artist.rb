@@ -1,3 +1,4 @@
+require_relative '../lib/concerns/memorable'
 require 'pry'
 
 class Artist
@@ -5,6 +6,7 @@ class Artist
   attr_reader :songs
 
   @@artists = []
+  extend Memorable
 
   def initialize
     @@artists << self
@@ -17,14 +19,6 @@ class Artist
 
   def self.all
     @@artists
-  end
-
-  def self.reset_all
-    self.all.clear
-  end
-
-  def self.count
-    self.all.count
   end
 
   def add_song(song)
