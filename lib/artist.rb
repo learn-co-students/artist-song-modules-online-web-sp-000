@@ -7,6 +7,8 @@ class Artist
 
   @@artists = []
 
+  extend Memorable
+
   def initialize
     @@artists << self
     @songs = []
