@@ -24,7 +24,7 @@ module Memorable
 # The super keyword, placed inside a method, will tell that method to look up its behavior in the method of the same name that lives in the parent, or super, class
 
 #  def initialize
-#    super   <-----
+#    super   <----- added to artist.rb
 #    @songs = []
 #  end
 
