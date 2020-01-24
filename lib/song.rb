@@ -11,13 +11,14 @@ class Song
   extend Memorable::ClassMethods
   extend Findable::ClassMethods
   include Paramable::InstanceMethods
+  include Memorable::InstanceMethods
 
 
   @@Songs = []
 
-  def initialize
-    @@Songs << self
-  end
+  # def initialize
+  #   @@Songs << self
+  # end
 
   # def self.find_by_name(name)
   #   @@Songs.detect{|a| a.name == name}
