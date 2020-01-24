@@ -10,20 +10,21 @@ class Artist
   attr_reader :songs
 
   extend Memorable::ClassMethods
+  extend Findable::ClassMethods
 
-  @@artists = []
+  @@all_instances = []
 
   def initialize
-    @@artists << self
+    @@all_instances << self
     @songs = []
   end
 
-  def self.find_by_name(name)
-    @@artists.detect{|a| a.name == name}
-  end
+  # def self.find_by_name(name)
+  #   @@all_instances.detect{|a| a.name == name}
+  # end
 
   def self.all
-    @@artists
+    @@all_instances
   end
 
   # def self.reset_all
