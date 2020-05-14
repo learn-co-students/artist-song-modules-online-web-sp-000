@@ -33,7 +33,7 @@ noticed we did in the previous two code along exercises, we created an
 environment file to handle those requirements for us. Because the
 `environment.rb` file is read and loaded into memory in line order, if `Artist`
 requires `Memorable`, then Artist must be required **after** requiring
-`Memorable`. `Memorable` must be loaded first, so that as Ruby when loads
+`Memorable`. `Memorable` must be loaded first, so that when Ruby loads
 `Artist`, `Memorable::ClassInstances` is already defined. Our `spec_helper`
 file, which is required by each individual spec file, required _only this
 `config/environment.rb` file_, instead of each and every file from the `lib`
