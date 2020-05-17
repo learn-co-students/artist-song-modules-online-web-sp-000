@@ -4,6 +4,8 @@ class Artist
   attr_accessor :name
   attr_reader :songs
 
+  extend Memorable
+
   @@artists = []
 
   def initialize
@@ -18,7 +20,7 @@ class Artist
   def self.all
     @@artists
   end
-
+=begin
   def self.reset_all
     self.all.clear
   end
@@ -26,7 +28,7 @@ class Artist
   def self.count
     self.all.count
   end
-
+=end
   def add_song(song)
     @songs << song
     song.artist = self
