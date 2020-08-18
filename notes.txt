@@ -1,0 +1,25 @@
+TDD Principles
+
+  1) Define behaviors of end result program.
+
+  2) Write tests for the program.
+    => When you do a, expect b.
+    => Consider potential exceptions and errors.
+
+  3) Write code to make the tests pass.
+    => And ONLY the code needed to make tests pass.
+
+  4) Refactor code to follow DRY, SSOT, & other principles.
+    => Refactoring often involves repeating step 3.
+
+Other Notes
+
+  - When defining class methods in a module ( that will be extended to other classes ),
+    the self keyword is omitted ( from the method name ).
+    The extend keyword handles the responsibility of demarcating certain methods as belonging to classes.
+
+  - You use gsub on a string to replace part of it.
+      e.g, name.downcase.gsub(' ', '-')
+           => make a name lowercase
+           => replace single-blank space characters with a hyphen
+     - There are more ways to use it: https://www.rubyguides.com/2019/07/ruby-gsub-method/
