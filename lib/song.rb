@@ -1,6 +1,7 @@
 require 'pry'
 
 class Song
+  include Paramable
   attr_accessor :name
   attr_reader :artist
 
@@ -30,7 +31,7 @@ class Song
     @artist = artist
   end
 
-  def to_param
-    name.downcase.gsub(' ', '-')
-  end
+  #def to_param
+  #  name.downcase.gsub(' ', '-')
+  #end
 end
