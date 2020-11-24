@@ -6,8 +6,8 @@ class Artist
 
   @@artists = []
 
-  def self.initialize
-    self.class.all << self
+  def initialize
+    super
     @songs = []
   end
 
@@ -24,7 +24,8 @@ class Artist
     songs.each { |song| add_song(song) }
   end
 
-  extend Memorable
+  extend Memorable::ClassMethods
+  include Memorable::InstanceMethods
   extend Findable
   include Paramable
 end
