@@ -30,6 +30,12 @@ class Song
     @artist = artist
   end
 
+  extend Memorable::ClassMethods
+  include Memorable::InstanceMethods
+  extend Findable
+  include PARAMABLE
+  attr_accessor :name, :artist
+
   def to_param
     name.downcase.gsub(' ', '-')
   end
