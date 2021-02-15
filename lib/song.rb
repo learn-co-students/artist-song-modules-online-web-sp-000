@@ -3,6 +3,7 @@ require 'pry'
 class Song
   attr_accessor :name
   attr_reader :artist
+  extend Memorable::ClassMethods
 
   @@songs = []
 
@@ -13,14 +14,9 @@ class Song
   def self.find_by_name(name)
     @@songs.detect{|a| a.name == name}
   end
-
   def self.all
     @@songs
-  end
-
-  def self.reset_all
-    self.all.clear
-  end
+  end 
 
   def self.count
     self.all.count
