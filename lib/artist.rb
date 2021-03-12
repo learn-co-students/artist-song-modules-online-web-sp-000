@@ -14,7 +14,6 @@ class Artist
   end
 
   def self.find_by_name(name)
-    binding.pry 
     @@artists.detect{|a| a.name == name}
   end
 
