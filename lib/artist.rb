@@ -7,14 +7,11 @@ class Artist
   @@artists = []
 
   extend Memorable 
-
+  include Paramable 
+  
   def initialize
     @@artists << self
     @songs = []
-  end
-
-  def self.find_by_name(name)
-    @@artists.detect{|a| a.name == name}
   end
 
   def self.all
