@@ -15,9 +15,9 @@ class Song
   include Memorable::InstanceMethods 
   include Paramable 
 
-  # def self.all
-  #   @@all 
-  # end
+  def self.all
+    @@all 
+  end
 
   def artist=(artist)
     @artist = artist
