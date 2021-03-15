@@ -6,16 +6,16 @@ class Artist
  @@artists = []
   
   def initialize(name)
-    @@artists << self
+    #@@artists << self
   end
   
-  extend Memorable::ClassMethods
-  extend Findable 
-  include Memorable::InstanceMethods 
-  include Paramable 
+  # extend Memorable::ClassMethods
+  # extend Findable 
+  # include Memorable::InstanceMethods 
+  # include Paramable 
   
-  def self.all
-     @@all 
+  def self.all 
+     @@all
   end
 
   def add_song(song)
