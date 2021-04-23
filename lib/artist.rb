@@ -1,4 +1,3 @@
-require_relative './concerns/memorable.rb'
 require 'pry'
 
 class Artist
