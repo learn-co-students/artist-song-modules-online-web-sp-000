@@ -1,12 +1,12 @@
 require 'pry'
 
 class Artist
-  attr_accessor :name
-  attr_reader :songs
-  
   extend Findable::ClassMethods
   extend Memorable::ClassMethods
-
+  include Paramable::ClassMethods
+  
+  attr_accessor :name
+  attr_reader :songs
 
   @@artists = []
 
@@ -43,4 +43,4 @@ class Artist
 #   def to_param
 #     name.downcase.gsub(' ', '-')
 #   end
-# end
+end
